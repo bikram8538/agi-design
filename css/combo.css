@@ -1,0 +1,33 @@
+/* Shared full-homepage presentation for all 20 visual prototypes. */
+:root { color-scheme: light; }
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; min-width: 0; }
+body { background: #fff; color: #242424; font-family: "Outfit", "Poppins", Arial, sans-serif; }
+button, input { font: inherit; }
+.agi-page { background: #fff; width: 100%; overflow: clip; }
+.agi-hero { max-width: 1536px; margin-inline: auto; position: relative; background: #fff; }
+.agi-hero__image { width: 100%; height: auto; display: block; aspect-ratio: 16 / 9; object-fit: contain; }
+.agi-hero__mobile-facts { display: none; }
+.agi-benefits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 1536px; margin: 0 auto 32px; border: 1px solid #e8e8e8; border-left: 0; border-right: 0; }
+.agi-benefits__item { display: flex; gap: 12px; align-items: center; justify-content: center; min-height: 82px; padding: 16px; border-right: 1px solid #e8e8e8; font-size: clamp(11px, .95vw, 14px); font-weight: 800; text-transform: uppercase; }
+.agi-benefits__item:last-child { border: 0; }
+.agi-benefits__icon { color: #cf2c23; width: 23px; height: 23px; flex: 0 0 auto; }
+.agi-benefits__icon svg { display: block; width: 100%; height: 100%; }
+.agi-preview-footer { text-align: center; max-width: 1000px; margin: 0 auto; padding: 14px 22px 52px; color: #666; font-size: 13px; line-height: 1.65; }
+.agi-preview-footer strong { color: #2b2b2b; }
+@media(max-width: 850px) {
+  .agi-benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .agi-benefits__item { min-height: 68px; justify-content: flex-start; }
+  .agi-benefits__item:nth-child(2) { border-right: 0; }
+  .agi-benefits__item:nth-child(-n+2) { border-bottom: 1px solid #e8e8e8; }
+}
+@media(max-width: 600px) {
+  .agi-hero { margin-top: 4px; }
+  .agi-hero__image { aspect-ratio: 16 / 9; object-fit: contain; }
+  .agi-hero__mobile-facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 11px; text-align: center; margin: -1px 12px 13px; padding: 10px 12px; border-top: 1px solid #f0dedc; border-bottom: 1px solid #f0dedc; color: #9e201b; font-weight: 750; font-size: 10px; letter-spacing: .025em; }
+  .agi-hero__mobile-facts span:not(:last-child)::after { content: '·'; margin-left: 11px; color: #c95e55; }
+  .agi-benefits { margin-bottom: 12px; }
+  .agi-benefits__item { gap: 7px; padding: 12px; min-height: 60px; font-size: 10px; }
+  .agi-benefits__icon { width: 17px; height: 17px; }
+  .agi-preview-footer { font-size: 11px; padding-bottom: 28px; }
+}

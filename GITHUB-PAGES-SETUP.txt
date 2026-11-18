@@ -1,0 +1,57 @@
+AIRGUN INDIA — SHARE THE CLIENT DESIGN PREVIEW WITH GITHUB PAGES
+===============================================================
+
+This is a static HTML/CSS/JavaScript preview. No build command, database,
+WordPress installation or hosting subscription is required.
+
+PUBLISH TO GITHUB PAGES
+-----------------------
+1. Extract the ZIP.
+2. Open the extracted airgun-india-20-designs folder.
+3. Create a new GitHub repository, for example agi-client-preview.
+4. Upload the CONTENTS of the airgun-india-20-designs folder to the repository
+   root, NOT the outer folder and NOT the .zip file itself.
+   Your repo's top level must include:
+     index.html
+     css/
+     js/
+     assets/
+     combinations/
+   The other original files and previews are fine to upload too.
+5. Commit your files to the main branch.
+6. In the repository, go to Settings > Pages.
+7. Under Build and deployment choose Source: Deploy from a branch.
+8. Choose branch main and folder /(root), then Save.
+9. Wait for GitHub Pages to publish. Open the resulting Pages link.
+
+Expected address pattern:
+  https://YOUR-USERNAME.github.io/agi-client-preview/
+
+The URL is an EXAMPLE. Use your actual username and repository name.
+
+SHARE A SELECTED COMBINATION
+----------------------------
+Choose a header and banner in the preview, then copy the full browser URL.
+The #design-04&banner-03 fragment is intentional and can be shared.
+Example:
+  https://YOUR-USERNAME.github.io/agi-client-preview/#design-04&banner-03
+
+If you want the client to see the complete layout without the design picker,
+use the Open button to visit the full-page preview and share that address.
+
+NOTES
+-----
+- GitHub Pages published sites are publicly accessible. Do not include secret
+  credentials, private client data or unpublished confidential assets.
+- This preview uses locally included images and relative links; it does not
+  depend on the dev.airgunsofindia.com site being online.
+- Header selection and banner selection update the URL, making client review
+  straightforward.
+- Static preview links to WordPress routes such as /shop/ are placeholders,
+  not working shopping pages on GitHub Pages.
+- The design is a concept preview only. It is not an installable WordPress
+  header plugin, and no live website files were changed.
+
+OFFICIAL REFERENCE
+------------------
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site

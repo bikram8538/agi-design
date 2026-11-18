@@ -1,0 +1,45 @@
+/* Low-profile opt-in presentation overrides for all original and new headers. */
+.agi-header .agi-promo { min-height: 25px !important; font-size: 10px; }
+.agi-header .agi-main { min-height: 65px !important; padding-top: 7px !important; padding-bottom: 7px !important; gap: 16px; }
+.agi-header .agi-surface { padding-top: 0 !important; padding-bottom: 0 !important; }
+.agi-header .agi-brand__logo--square { width: 45px !important; height: 45px !important; }
+.agi-header .agi-brand__logo--horizontal { width: 170px !important; max-height: 49px !important; }
+.agi-header .agi-search { height: 40px !important; border-radius: 8px; }
+.agi-header .agi-actions .agi-action { min-height: 37px; padding: 7px 10px; font-size: 11px; }
+.agi-header .agi-nav { min-height: 37px !important; }
+.agi-header .agi-nav__link { padding: 10px 8px !important; font-size: 10px; }
+.agi-header .agi-nav__all { padding: 9px 13px !important; }
+.agi-header .agi-utility { display: none !important; }
+.agi-header .agi-brand__logo-wrap { border-radius: 6px; padding: 3px 5px; }
+.agi-new .nh-top .nh-shell { min-height: 25px !important; }
+.agi-new .nh-main { min-height: 69px !important; gap: 16px; }
+.agi-new .nh-logo { max-width: 176px; }
+.agi-new .nh-logo img { max-height: 49px !important; }
+.agi-new .nh-search { height: 40px !important; }
+.agi-new .nh-search button { width: 46px; }
+.agi-new .nh-nav { min-height: 38px !important; }
+.agi-new .nh-nav a { padding: 11px 2px !important; font-size: 10px; }
+.agi-new .nh-action { padding: 7px 1px; font-size: 11px; }
+.agi-new .nh-action--cart { padding: 9px 12px; }
+.agi-page .agi-benefits { margin-bottom:12px; border-top:1px solid #ededed; }
+.agi-page .agi-benefits__item { min-height:46px; padding:9px; font-size:10px; }
+.agi-page .agi-benefits__icon { width:17px; height:17px; }
+@media(max-width: 900px) {
+ .agi-header .agi-promo { display:none !important; }
+ .agi-header .agi-main { min-height:0 !important; gap:7px; padding-top:9px !important; padding-bottom:10px !important; }
+ .agi-header .agi-mobile summary { width:35px; height:35px; }
+ .agi-header .agi-brand__logo--square { width:37px !important; height:37px !important; }
+ .agi-header .agi-brand__logo--horizontal { width:clamp(118px,34vw,156px) !important; max-height:39px !important; }
+ .agi-header .agi-search { height:38px !important; }
+ .agi-header .agi-actions .agi-action { min-height:34px; padding:6px !important; }
+}
+@media(max-width: 850px) {
+ .agi-new .nh-top { display:none !important; }
+ .agi-new .nh-main { min-height:0 !important; gap:7px !important; padding-top:8px !important; padding-bottom:9px !important; }
+ .agi-new .nh-mobile summary { width:36px; height:36px; }
+ .agi-new .nh-logo { max-width:158px; }
+ .agi-new .nh-logo img { max-height:37px !important; }
+ .agi-new .nh-search { height:37px !important; }
+ .agi-new .nh-action { padding:5px; }
+ .agi-new .nh-action--cart { padding:8px; }
+}

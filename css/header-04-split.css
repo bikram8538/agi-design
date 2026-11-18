@@ -1,0 +1,86 @@
+
+/* AirGun India header concepts — isolated to .agi-header; no external dependencies */
+.agi-header, .agi-header *{box-sizing:border-box}
+.agi-header{--ink:#181b22;--scarlet:#df302b;--paper:#fff;--muted:#666;--line:rgba(30,30,30,.12);font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);width:100%;position:relative;z-index:20;line-height:1.35;isolation:isolate}
+.agi-header a{color:inherit;text-decoration:none}.agi-header button,.agi-header input,.agi-header select{font:inherit}.agi-header button{cursor:pointer}
+.agi-header .agi-icon{display:inline-block;vertical-align:middle;flex-shrink:0}
+.agi-header .agi-inner{width:min(100% - 48px,1360px);margin-inline:auto}
+.agi-header .agi-promo{min-height:34px;font-size:11px;letter-spacing:.035em;font-weight:650;display:flex;align-items:center}
+.agi-header .agi-promo .agi-inner{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.agi-header .agi-promo a{text-decoration:underline;text-underline-offset:2px;font-weight:800}
+.agi-header .agi-promo__right{display:flex;align-items:center;gap:16px;white-space:nowrap}
+.agi-header .agi-main{min-height:92px;display:flex;align-items:center;gap:26px}
+.agi-header .agi-brand{display:inline-flex;align-items:center;gap:10px;flex-shrink:0;white-space:nowrap}
+.agi-header .agi-brand__symbol{width:44px;height:44px;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;position:relative;font-weight:900;letter-spacing:-2px;font-size:16px;line-height:1}
+.agi-header .agi-brand__symbol:before{content:'';position:absolute;inset:7px;border:1px solid currentColor;border-radius:50%;opacity:.42}
+.agi-header .agi-brand__name{font-size:22px;line-height:1;letter-spacing:-.75px;font-weight:900}
+.agi-header .agi-brand__name small{display:block;font-size:8.5px;letter-spacing:2.35px;margin-top:5px;font-weight:750}
+.agi-header .agi-search{height:48px;min-width:220px;flex:1;display:flex;align-items:center;overflow:hidden;border-radius:9px;position:relative}
+.agi-header .agi-search__label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.agi-header .agi-search input[type=search]{background:transparent;border:0;outline:0;min-width:0;flex:1;width:100%;height:100%;padding:0 15px;color:inherit;font-size:13px;box-shadow:none}
+.agi-header .agi-search input::placeholder{color:inherit;opacity:.6}
+.agi-header .agi-search button{display:grid;place-items:center;border:0;min-width:54px;height:100%;padding:0 15px}
+.agi-header .agi-search__category{border:0;border-right:1px solid rgba(0,0,0,.12);background:transparent;padding:0 12px;height:50%;font-size:11px;font-weight:700;max-width:120px;color:inherit}
+.agi-header .agi-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.agi-header .agi-action{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:8px;padding:12px 13px;min-height:43px;font-size:12px;font-weight:800;white-space:nowrap;transition:transform .18s,background .18s}
+.agi-header .agi-action:hover,.agi-header .agi-nav__link:hover{transform:translateY(-1px)}
+.agi-header .agi-cart{position:relative}.agi-header .agi-cart__count{font-size:10px;font-weight:900;border-radius:99px;display:grid;place-items:center;min-width:17px;height:17px;position:absolute;right:2px;top:3px}
+.agi-header .agi-nav{min-height:48px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}.agi-header .agi-nav::-webkit-scrollbar{display:none}
+.agi-header .agi-nav__link{font-size:11px;font-weight:800;text-transform:uppercase;white-space:nowrap;letter-spacing:.01em;padding:13px 10px;border-radius:5px;transition:background .2s,transform .2s}
+.agi-header .agi-nav__all{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:900;padding:12px 16px;white-space:nowrap;border-radius:6px;margin-right:9px}
+.agi-header .agi-navrow{border-top:1px solid var(--line)}
+.agi-header .agi-trust{font-size:10px;font-weight:750;letter-spacing:.04em;display:flex;align-items:center;gap:12px;white-space:nowrap}
+.agi-header .agi-mobile{display:none;position:relative}
+.agi-header .agi-mobile summary{list-style:none;cursor:pointer;display:grid;place-items:center;width:38px;height:38px;border:1px solid currentColor;border-radius:7px}
+.agi-header .agi-mobile summary::-webkit-details-marker{display:none}
+.agi-header .agi-mobile__panel{position:absolute;left:0;top:46px;width:min(340px,calc(100vw - 32px));background:#fff;color:#20242c;border:1px solid #ddd;box-shadow:0 14px 35px #0003;border-radius:12px;padding:8px;z-index:50}
+.agi-header .agi-mobile__panel a{display:flex;align-items:center;justify-content:space-between;padding:12px;border-bottom:1px solid #f0f0f0;font-size:12px;font-weight:750}
+.agi-header .agi-mobile__panel a:last-child{border-bottom:0}
+.agi-header .agi-highlight{font-weight:850}.agi-header .agi-chip{display:inline-flex;align-items:center;gap:7px;border-radius:99px;padding:5px 9px;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.agi-header a:focus-visible,.agi-header input:focus-visible,.agi-header select:focus-visible,.agi-header summary:focus-visible,.agi-header button:focus-visible{outline:3px solid #ffbc55;outline-offset:2px}
+@media(max-width:1050px){.agi-header .agi-main{gap:12px}.agi-header .agi-brand__name{font-size:19px}.agi-header .agi-nav__link{padding:11px 7px;font-size:10px}.agi-header .agi-action{padding:10px}}
+@media(max-width:900px){
+ .agi-header .agi-inner{width:calc(100% - 28px)}
+ .agi-header .agi-promo__right{display:none}
+ .agi-header .agi-main{display:grid;grid-template-columns:auto 1fr auto;gap:12px;min-height:unset;padding-top:12px;padding-bottom:12px}
+ .agi-header .agi-mobile{display:block;grid-column:1;grid-row:1}
+ .agi-header .agi-brand{grid-column:2;grid-row:1;justify-self:start}
+ .agi-header .agi-brand__symbol{width:34px;height:34px;font-size:13px}
+ .agi-header .agi-brand__symbol:before{inset:5px}
+ .agi-header .agi-brand__name{font-size:17px}
+ .agi-header .agi-brand__name small{font-size:7px;letter-spacing:1.8px;margin-top:3px}
+ .agi-header .agi-actions{grid-column:3;grid-row:1;justify-self:end;gap:2px}
+ .agi-header .agi-actions .agi-action{padding:8px;border-radius:6px}
+ .agi-header .agi-actions .agi-action span.agi-action__label{display:none}
+ .agi-header .agi-actions .agi-action.agi-action--wishlist{display:none}
+ .agi-header .agi-search{grid-column:1 / -1;grid-row:2;width:100%;min-width:0;height:43px}
+ .agi-header .agi-navrow{display:none}
+ .agi-header .agi-trust{display:none}
+ .agi-header .agi-search__category{display:none}
+}
+@media(max-width:400px){.agi-header .agi-brand__name{font-size:15px}.agi-header .agi-main{column-gap:8px}.agi-header .agi-brand{gap:6px}.agi-header .agi-promo{font-size:9px}.agi-header .agi-actions .agi-action{padding:5px}.agi-header .agi-brand__symbol{width:31px;height:31px}}
+
+ .agi-style-split .agi-promo{background:#ee312e;color:white}.agi-style-split .agi-surface{background:linear-gradient(90deg,#fdf7f2,#fff);color:#1e2228}.agi-style-split .agi-brand{background:#c9292e;color:#fff;padding:19px 20px 19px max(20px,calc((100vw - 1360px)/2));margin-left:min(-24px,calc((1360px - 100vw)/2));clip-path:polygon(0 0,calc(100% - 14px) 0,100% 100%,0 100%)}.agi-style-split .agi-logo-accent{color:#ffd4d0}.agi-style-split .agi-search{background:#f2eff0;color:#25232b;border:1px solid #dfd9da;border-radius:4px}.agi-style-split .agi-search button{background:#cf3035;color:#fff}.agi-style-split .agi-action--account{color:#25232b}.agi-style-split .agi-action--cart{background:#1e2229;color:white;border-radius:3px}.agi-style-split .agi-navrow{background:#24232b;color:#fff}.agi-style-split .agi-nav__all{background:#d52f34;border-radius:2px}.agi-style-split .agi-nav__link:hover{color:#ffc5bd}.agi-style-split .agi-utility{background:#ffecec;color:#aa1a20}.agi-style-split .agi-utility .agi-inner{padding:8px 0;font-size:10px;font-weight:800;text-align:right}@media(max-width:900px){.agi-style-split .agi-brand{margin:0;padding:0;background:none;color:#d52f34;clip-path:none}.agi-style-split .agi-logo-accent{color:#171b22}}
+
+/* Original AirGun India assets. The images are never recoloured or recreated. */
+.agi-header .agi-brand{display:inline-flex;align-items:center;justify-content:flex-start;max-width:100%;flex-shrink:0;white-space:normal;gap:0}
+.agi-header .agi-brand__logo-wrap{display:flex;align-items:center;justify-content:center;max-width:100%;background:#fff;border:1px solid #ffffff66;border-radius:9px;box-shadow:0 3px 12px rgba(0,0,0,.12);padding:4px 7px;overflow:hidden}
+.agi-header .agi-brand__logo{display:block;object-fit:contain;object-position:center;width:auto;max-width:100%;height:auto;border:0;box-shadow:none;filter:none!important}
+.agi-header .agi-brand__logo--square{width:68px;height:68px}
+.agi-header .agi-brand__logo--horizontal{width:228px;max-height:65px}
+.agi-style-split .agi-brand{background:#c9292e;padding:6px 18px 6px max(20px,calc((100vw - 1360px)/2))}
+.agi-style-editorial .agi-brand{flex-direction:row;align-items:center}
+.agi-style-royal .agi-brand{justify-content:center}
+@media(max-width:1050px){
+ .agi-header .agi-brand__logo--square{width:58px;height:58px}
+ .agi-header .agi-brand__logo--horizontal{width:194px;max-height:57px}
+}
+@media(max-width:900px){
+ .agi-header .agi-brand__logo-wrap{padding:3px 5px;border-radius:7px}
+ .agi-header .agi-brand__logo--square{width:47px;height:47px}
+ .agi-header .agi-brand__logo--horizontal{width:clamp(115px,35vw,180px);height:auto;max-height:46px}
+ .agi-style-royal .agi-brand{justify-content:flex-start}
+ .agi-style-split .agi-brand{background:none!important;padding:0!important;clip-path:none!important;margin:0!important}
+}
+@media(max-width:385px){.agi-header .agi-brand__logo--horizontal{width:clamp(112px,33vw,145px)}.agi-header .agi-brand__logo--square{width:42px;height:42px}}
+

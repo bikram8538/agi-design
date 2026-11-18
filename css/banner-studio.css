@@ -1,0 +1,137 @@
+/* Mix-and-match catalogue banner studio: ten responsive compositions. */
+.ab-studio { --ab-ink:#20242c; --ab-muted:#69717d; --ab-accent:#d62d26; --ab-surface:#fff; --ab-border:#e8e8eb; --ab-radius:12px; max-width:1480px; margin:11px auto 0; padding:0 18px; color:var(--ab-ink); font-family:"Outfit","Poppins",Arial,sans-serif; }
+.ab-studio *, .ab-studio *::before, .ab-studio *::after { box-sizing:border-box; }
+.ab-studio a { color:inherit; text-decoration:none; }
+.ab-studio a:focus-visible { outline:3px solid #e7a949; outline-offset:3px; }
+.ab-stage { display:grid; grid-template-columns:minmax(0,2.04fr) minmax(275px,1fr); gap:13px; align-items:stretch; }
+.ab-feature { min-width:0; background:white; display:flex; flex-direction:column; border:1px solid var(--ab-border); border-radius:var(--ab-radius); overflow:hidden; }
+.ab-feature__visual { display:flex; justify-content:center; align-items:center; flex:1; min-height:0; background:#fff; overflow:hidden; }
+.ab-feature__visual img { display:block; width:100%; height:auto; object-fit:contain; aspect-ratio:16/9; }
+.ab-feature__bar { min-height:46px; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:9px 17px 11px; background:var(--ab-surface); border-top:1px solid var(--ab-border); }
+.ab-feature__bar b { font-size:12px; font-weight:850; }
+.ab-feature__bar small { display:block; font-size:10px; margin-top:4px; color:var(--ab-muted); }
+.ab-feature__button { display:inline-flex; align-items:center; gap:6px; white-space:nowrap; background:var(--ab-accent); color:#fff !important; border-radius:6px; padding:9px 12px; font-weight:850; font-size:11px; }
+.ab-cards { display:grid; grid-template-columns:1fr; grid-template-rows:repeat(2,minmax(0,1fr)); gap:13px; min-width:0; }
+.ab-card { background:var(--card-bg,#f7f7f7); color:var(--card-ink,#293038) !important; border:1px solid var(--ab-border); border-radius:var(--ab-radius); display:flex; flex-direction:column; justify-content:space-between; min-width:0; min-height:0; overflow:hidden; position:relative; isolation:isolate; transition:transform .18s, border-color .18s; }
+.ab-card:hover { transform:translateY(-2px); border-color:var(--ab-accent); }
+.ab-card__head { padding:14px 15px 0; position:relative; z-index:1; }
+.ab-card__eyebrow { display:block; font-size:9px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--ab-accent); margin-bottom:8px; }
+.ab-card__head strong { display:block; font-size:clamp(13px,1.14vw,17px); font-weight:850; line-height:1.2; max-width:95%; }
+.ab-card__subtitle { font-size:10px; color:var(--ab-muted); display:block; margin-top:6px; line-height:1.3; }
+.ab-card__media { flex:1; position:relative; min-height:35px; display:grid; place-items:center; overflow:hidden; margin:2px 14px; }
+.ab-card__media::before { content:''; width:clamp(68px,9vw,150px); aspect-ratio:1; position:absolute; border-radius:50%; background:var(--card-ornament,#e9eaf1); opacity:.82; }
+.ab-card__media svg { width:clamp(45px,5.5vw,78px); height:clamp(45px,5.5vw,78px); position:relative; color:var(--card-line,#677182); stroke-width:1.5; }
+.ab-card__media img { display:block; width:100%; height:100%; max-height:110px; object-fit:cover; object-position:50% 52%; mix-blend-mode:multiply; position:relative; }
+.ab-card__tail { display:flex; align-items:center; justify-content:space-between; gap:8px; position:relative; z-index:1; padding:7px 15px 12px; font-size:10px; font-weight:850; color:var(--ab-accent); }
+.ab-card__tail span:last-child { font-size:15px; }
+.ab-card--red { --card-bg:#fff4f3; --card-ornament:#fad8d3; --card-line:#bd3b33; }
+.ab-card--charcoal { --card-bg:#edf0f2; --card-ornament:#d8dee3; --card-line:#475967; }
+.ab-card--cream { --card-bg:#faf4e9; --card-ornament:#efdfc4; --card-line:#8f6c48; }
+.ab-card--mint { --card-bg:#edf8f5; --card-ornament:#d2eae2; --card-line:#438e83; }
+.ab-card--blue { --card-bg:#eff4fa; --card-ornament:#dbe9fa; --card-line:#477eae; }
+.ab-card--plum { --card-bg:#f6eff7; --card-ornament:#e9d8eb; --card-line:#825b87; }
+.ab-info-row { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:9px 21px; padding:10px 14px; font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.075em; color:#6d727c; }
+.ab-info-row i { width:4px; height:4px; background:#d52f27; border-radius:50%; }
+/* Layout 1: classic two high cards on the right. */
+.ab-layout-01 { --ab-surface:#fcfbfa; }
+/* Layout 2: balanced 2-by-2 catalog cards. */
+.ab-layout-02 .ab-stage { grid-template-columns:minmax(0,1.75fr) minmax(330px,1fr); }
+.ab-layout-02 .ab-cards { grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(0,1fr)); gap:9px; }
+.ab-layout-02 .ab-card__head { padding:11px 10px 0; }.ab-layout-02 .ab-card__tail { padding:5px 10px 10px; }.ab-layout-02 .ab-card__subtitle { display:none; }
+.ab-layout-02 .ab-card__media svg { width:47px; height:47px; }
+/* Layout 3: editorial three-up vertical right column. */
+.ab-layout-03 { --ab-accent:#202b38; --ab-radius:0; --ab-border:#e2e4e7; }
+.ab-layout-03 .ab-cards { grid-template-rows:repeat(3,minmax(0,1fr)); gap:8px; }
+.ab-layout-03 .ab-card { display:grid; grid-template-columns:1fr 100px; }
+.ab-layout-03 .ab-card__head { align-self:center; padding:10px 0 10px 14px; }
+.ab-layout-03 .ab-card__media { grid-column:2; grid-row:1/3; margin:0; }
+.ab-layout-03 .ab-card__media svg { width:52px; height:52px; }
+.ab-layout-03 .ab-card__tail { grid-column:1; grid-row:2; align-self:end; padding:0 14px 9px; }
+.ab-layout-03 .ab-card__subtitle { display:none; }
+/* Layout 4: numbered horizontal catalog list. */
+.ab-layout-04 { --ab-accent:#c43631; --ab-radius:5px; }
+.ab-layout-04 .ab-stage { grid-template-columns:minmax(0,2.1fr) minmax(300px,.95fr); }
+.ab-layout-04 .ab-cards { grid-template-rows:repeat(4,minmax(0,1fr)); gap:7px; }
+.ab-layout-04 .ab-card { display:grid; grid-template-columns:1fr 73px; background:#f9fafa; }
+.ab-layout-04 .ab-card__head { grid-column:1; grid-row:1; align-self:center; padding:6px 0 5px 13px; }
+.ab-layout-04 .ab-card__eyebrow { margin-bottom:4px; }
+.ab-layout-04 .ab-card__head strong { font-size:13px; }
+.ab-layout-04 .ab-card__media { grid-column:2; grid-row:1/3; margin:0; }
+.ab-layout-04 .ab-card__media svg { width:39px; height:39px; }
+.ab-layout-04 .ab-card__tail { grid-column:1; padding:0 13px 6px; font-size:9px; }
+.ab-layout-04 .ab-card__subtitle { display:none; }
+/* Layout 5: large featured tile above two compact cards. */
+.ab-layout-05 { --ab-accent:#a93633; --ab-radius:13px; }
+.ab-layout-05 .ab-stage { grid-template-columns:minmax(0,1.85fr) minmax(320px,1fr); }
+.ab-layout-05 .ab-cards { grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:1.18fr 1fr; gap:9px; }
+.ab-layout-05 .ab-card:first-child { grid-column:1/-1; }
+.ab-layout-05 .ab-card:first-child .ab-card__head strong { font-size:20px; }
+.ab-layout-05 .ab-card:nth-child(n+2) .ab-card__subtitle { display:none; }
+.ab-layout-05 .ab-card:nth-child(n+2) .ab-card__head { padding:10px 10px 0; }
+.ab-layout-05 .ab-card:nth-child(n+2) .ab-card__tail { padding:6px 10px; }
+/* Layout 6: 4 airy premium cards. */
+.ab-layout-06 { --ab-accent:#926e4b; --ab-radius:2px; --ab-border:#e6dfd3; }
+.ab-layout-06 .ab-stage { grid-template-columns:minmax(0,1.7fr) minmax(340px,1fr); }
+.ab-layout-06 .ab-cards { grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(0,1fr)); gap:11px; }
+.ab-layout-06 .ab-card { background:#fffaf1; }.ab-layout-06 .ab-card__head { padding:13px 11px 0; }
+.ab-layout-06 .ab-card__media svg { width:55px; height:55px; }
+.ab-layout-06 .ab-card__tail { padding:7px 11px; }
+/* Layout 7: asymmetrical 65/35 vertical panel. */
+.ab-layout-07 { --ab-accent:#be3a34; --ab-radius:15px; }
+.ab-layout-07 .ab-stage { grid-template-columns:minmax(0,2.2fr) minmax(260px,.8fr); }
+.ab-layout-07 .ab-cards { grid-template-rows:1.55fr 1fr; }
+.ab-layout-07 .ab-card:first-child { background:#f6e8e5; }
+.ab-layout-07 .ab-card:first-child .ab-card__media svg { width:91px; height:91px; }
+/* Layout 8: ultra-compact cards in a vertical rail. */
+.ab-layout-08 { --ab-accent:#266b68; --ab-radius:7px; }
+.ab-layout-08 .ab-stage { grid-template-columns:minmax(0,2.25fr) minmax(280px,.9fr); }
+.ab-layout-08 .ab-cards { grid-template-rows:repeat(4,minmax(0,1fr)); gap:5px; }
+.ab-layout-08 .ab-card { display:grid; grid-template-columns:65px 1fr; }
+.ab-layout-08 .ab-card__media { grid-column:1; grid-row:1/3; margin:0 5px; }
+.ab-layout-08 .ab-card__media svg { width:36px; height:36px; }
+.ab-layout-08 .ab-card__head { grid-column:2; grid-row:1; padding:10px 6px 0 2px; }
+.ab-layout-08 .ab-card__head strong { font-size:12px; }
+.ab-layout-08 .ab-card__eyebrow { margin-bottom:3px; }
+.ab-layout-08 .ab-card__subtitle { display:none; }
+.ab-layout-08 .ab-card__tail { grid-column:2; grid-row:2; padding:0 9px 7px 2px; }
+/* Layout 9: bold outlined mosaic. */
+.ab-layout-09 { --ab-accent:#b5282c; --ab-radius:0; --ab-border:#d9d9df; }
+.ab-layout-09 .ab-stage { grid-template-columns:minmax(0,1.9fr) minmax(315px,1fr); gap:6px; }
+.ab-layout-09 .ab-cards { grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(0,1fr)); gap:6px; }
+.ab-layout-09 .ab-card { background:#fff; border-top:4px solid var(--ab-accent); }
+.ab-layout-09 .ab-card__head { padding:10px 9px 0; }.ab-layout-09 .ab-card__subtitle { display:none; }
+.ab-layout-09 .ab-card__tail { padding:6px 9px; }.ab-layout-09 .ab-card__media svg { width:50px; height:50px; }
+/* Layout 10: cinematic two-tile dark rail. */
+.ab-layout-10 { --ab-accent:#e44f49; --ab-radius:8px; --ab-border:#343b42; }
+.ab-layout-10 .ab-feature { border-color:#e5e5e5; }
+.ab-layout-10 .ab-cards { grid-template-columns:1fr; }
+.ab-layout-10 .ab-card { background:#202a34; --card-ink:#fff; --ab-muted:#c7d3df; border-color:#414e58; }
+.ab-layout-10 .ab-card__head strong { font-size:20px; }.ab-layout-10 .ab-card__media svg { width:91px; height:91px; color:#97c1d0; }
+.ab-layout-10 .ab-card__media::before { background:#34414c; }
+@media(max-width:900px) {
+ .ab-studio { padding:0 10px; margin-top:8px; }
+ .ab-stage { grid-template-columns:minmax(0,1.55fr) minmax(230px,1fr) !important; gap:9px; }
+ .ab-cards { gap:8px; }
+ .ab-card__head { padding:10px 9px 0; }.ab-card__head strong { font-size:12px; }.ab-card__subtitle { display:none; }
+ .ab-card__eyebrow { margin-bottom:4px; }.ab-card__tail { padding:5px 9px 7px; }
+ .ab-card__media svg { width:42px; height:42px; }
+ .ab-feature__bar { min-height:40px; padding:7px 9px; }.ab-feature__bar b { font-size:11px; }
+}
+@media(max-width:670px) {
+ .ab-studio { padding:0 8px; margin-top:6px; }
+ .ab-stage { display:flex; flex-direction:column; gap:8px; }
+ .ab-feature__visual img { width:100%; aspect-ratio:16/9; }
+ .ab-cards, .ab-layout-03 .ab-cards, .ab-layout-04 .ab-cards, .ab-layout-08 .ab-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:minmax(142px,auto); grid-template-rows:unset; gap:7px; }
+ .ab-card, .ab-layout-03 .ab-card, .ab-layout-04 .ab-card, .ab-layout-08 .ab-card { display:flex; flex-direction:column; }
+ .ab-card { min-height:142px; }
+ .ab-card__head, .ab-layout-03 .ab-card__head, .ab-layout-04 .ab-card__head, .ab-layout-08 .ab-card__head { padding:10px 10px 0; align-self:stretch; }
+ .ab-card__head strong { font-size:12px !important; }
+ .ab-card__eyebrow { font-size:8px; }.ab-card__subtitle { display:none; }
+ .ab-card__media, .ab-layout-03 .ab-card__media, .ab-layout-04 .ab-card__media, .ab-layout-08 .ab-card__media { margin:0 10px; grid-column:auto; grid-row:auto; min-height:37px; }
+ .ab-card__media svg, .ab-layout-03 .ab-card__media svg, .ab-layout-04 .ab-card__media svg, .ab-layout-08 .ab-card__media svg { width:40px !important; height:40px !important; }
+ .ab-card__tail, .ab-layout-03 .ab-card__tail, .ab-layout-04 .ab-card__tail, .ab-layout-08 .ab-card__tail { grid-column:auto; grid-row:auto; align-self:stretch; padding:4px 10px 8px; }
+ .ab-layout-05 .ab-card:first-child { grid-column:1/-1; }
+ .ab-layout-05 .ab-card:first-child .ab-card__head strong { font-size:15px !important; }
+ .ab-info-row { gap:6px 12px; font-size:8px; padding:8px 0; }
+}
+@media(max-width:350px) { .ab-card__head strong { font-size:11px !important; }.ab-feature__bar small { display:none; }.ab-feature__button { padding:8px; font-size:10px; } }
